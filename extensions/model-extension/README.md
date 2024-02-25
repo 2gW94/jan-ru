@@ -1,67 +1,67 @@
-# Jan Model Management plugin
+# Плагин Менаджер моделей Jan
 
-Created using Jan app example
+Создан на примере приложения Jan
 
-# Create a Jan Plugin using Typescript
+# Создание плагина Jan с помощью TypeScript
 
-Use this template to bootstrap the creation of a TypeScript Jan plugin. 🚀
+Используйте этот шаблон для создания плагина Jan на TypeScript. 🚀
 
-## Create Your Own Plugin
+## Создайте свой собственный плагин
 
-To create your own plugin, you can use this repository as a template! Just follow the below instructions:
+Чтобы создать свой собственный плагин, вы можете использовать этот репозиторий в качестве шаблона! Просто следуйте приведенным ниже инструкциям:
 
-1. Click the Use this template button at the top of the repository
-2. Select Create a new repository
-3. Select an owner and name for your new repository
-4. Click Create repository
-5. Clone your new repository
+1. Нажмите кнопку Использовать этот шаблон в верхней части хранилища.
+2. Выберите Создать новый репозиторий
+3. Выберите владельца и имя для нового хранилища
+4. Нажмите кнопку Создать хранилище
+5. Клонируйте новый репозиторий
 
-## Initial Setup
+## Начальная настройка
 
-After you've cloned the repository to your local machine or codespace, you'll need to perform some initial setup steps before you can develop your plugin.
+После того как вы клонировали репозиторий на локальную машину или в кодовое пространство, вам нужно будет выполнить несколько шагов по начальной настройке, прежде чем вы сможете разрабатывать свой плагин.
 
-> [!NOTE]
+> [!ПРИМЕЧАНИЕ]
 >
-> You'll need to have a reasonably modern version of
-> [Node.js](https://nodejs.org) handy. If you are using a version manager like
-> [`nodenv`](https://github.com/nodenv/nodenv) or
-> [`nvm`](https://github.com/nvm-sh/nvm), you can run `nodenv install` in the
-> root of your repository to install the version specified in
-> [`package.json`](./package.json). Otherwise, 20.x or later should work!
+> Вам потребуется достаточно современная версия
+> [Node.js](https://nodejs.org) под рукой. Если вы используете менеджер версий, например
+> [`nodenv`](https://github.com/nodenv/nodenv) или
+> [`nvm`](https://github.com/nvm-sh/nvm), вы можете запустить `nodenv install` в
+> корне вашего репозитория, чтобы установить версию, указанную в
+> [`package.json`](./package.json). В противном случае, 20.x или более поздняя версия должна работать!
 
-1. :hammer_and_wrench: Install the dependencies
+1. :hammer_and_wrench: Установите зависимости
 
    ```bash
    npm install
    ```
 
-1. :building_construction: Package the TypeScript for distribution
+1. :building_construction: Упакуйте TypeScript для распространения
 
    ```bash
    npm run bundle
    ```
 
-1. :white_check_mark: Check your artifact
+1. :white_check_mark: Проверьте свой артефакт
 
-   There will be a tgz file in your plugin directory now
+   Теперь в вашей директории плагинов будет находиться файл tgz
 
-## Update the Plugin Metadata
+## Обновление метаданных плагина
 
-The [`package.json`](package.json) file defines metadata about your plugin, such as
-plugin name, main entry, description and version.
+Файл [`package.json`](package.json) определяет метаданные о вашем плагине, такие как
+имя плагина, основная запись, описание и версия.
 
-When you copy this repository, update `package.json` with the name, description for your plugin.
+Когда вы копируете этот репозиторий, обновите `package.json` с именем и описанием для вашего плагина.
 
-## Update the Plugin Code
+## Обновление кода плагина
 
-The [`src/`](./src/) directory is the heart of your plugin! This contains the
-source code that will be run when your plugin extension functions are invoked. You can replace the
-contents of this directory with your own code.
+Директория [`src/`](./src/) - это сердце вашего плагина! Она содержит
+исходный код, который будет выполняться при вызове функций расширения вашего плагина. Вы можете заменить
+содержимое этой директории своим собственным кодом.
 
-There are a few things to keep in mind when writing your plugin code:
+При написании кода плагина следует учитывать несколько моментов:
 
-- Most Jan Plugin Extension functions are processed asynchronously.
-  In `index.ts`, you will see that the extension function will return a `Promise<any>`.
+- Большинство функций расширения плагина Jan обрабатываются асинхронно.
+  В `index.ts` вы увидите, что функция расширения возвращает `Promise<any>`.
 
   ```typescript
   import { core } from "@janhq/core";
@@ -71,8 +71,8 @@ There are a few things to keep in mind when writing your plugin code:
   }
   ```
 
-  For more information about the Jan Plugin Core module, see the
-  [documentation](https://github.com/janhq/jan/blob/main/core/README.md).
+  Для получения дополнительной информации о модуле Jan Plugin Core см.
+  [документация](https://github.com/janhq/jan/blob/main/core/README.md).
 
-So, what are you waiting for? Go ahead and start customizing your plugin!
+Итак, чего же вы ждете? Вперед и начинайте настраивать свой плагин!
 
