@@ -2,31 +2,31 @@
 
 First off, thank you for considering contributing to jan. It's people like you that make jan such an amazing project.
 
-## How Can I Contribute?
+## Как я могу внести свой вклад?
 
-### Reporting Bugs
+### Сообщение об ошибках
 
-- **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/janhq/jan/issues).
-- If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/janhq/jan/issues/new).
+- **Убедитесь, что об ошибке уже не сообщалось**, выполнив поиск на GitHub в разделе [Issues](https://github.com/janhq/jan/issues).
+- Если вы не можете найти открытый вопрос, связанный с проблемой, [откройте новый](https://github.com/janhq/jan/issues/new).
 
-### Suggesting Enhancements
+### Предложения по улучшению
 
-- Open a new issue with a clear title and description.
+- Откройте новую проблему с четким названием и описанием.
 
-### Your First Code Contribution
+### Ваш первый вклад в код
 
-- Fork the repo.
-- Create a new branch (`git checkout -b feature-name`).
-- Commit your changes (`git commit -am 'Add some feature'`).
-- Push to the branch (`git push origin feature-name`).
-- Open a new Pull Request.
+- Форкните репозиторий.
+- Создайте новую ветку (`git checkout -b feature-name`).
+- Зафиксируйте свои изменения (`git commit -am 'Add some feature'`).
+- Переместите изменения в ветку (`git push origin feature-name`).
+- Откройте новый Pull Request.
 
-## Styleguides
+## Гайд по стилю 
 
 ### Git Commit Messages
 
-- Use the present tense ("Add feature" not "Added feature").
+- Используйте настоящее время ("Добавить функцию", а не "Добавил функцию").
 
-## Additional Notes
+## Дополнительные примечания
 
-Thank you for contributing to jan!
+Спасибо за вклад в развитие jan!
