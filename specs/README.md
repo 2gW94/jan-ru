@@ -1,19 +1,19 @@
-# Jan Improvement Proposals
+# Jan Предложения по улучшению
 
-This is a repo of key architecture decisions for Jan. 
+Это репозиторий ключевых архитектурных решений Jan. 
 
-[Read more about ADRs](https://github.com/joelparkerhenderson/architecture-decision-record)
+[Подробнее об ADRs](https://github.com/joelparkerhenderson/architecture-decision-record)
 
-### Get started:
+### Начните:
 
 ```sh
 # In root:
 make newadr
 ```
 
-### Template:
-- **Status**: `pending`, `approved`, or `rejected`
-- **Context**: a clearly defined problem/goal
-- **Decisions**: the proposed architecture choices & changes
-- **Consequences**: pros and cons of the decision
-- **References**: any relevant materials to read
+### Шаблон:
+- **Статус**: `отложено`, `одобрено` или `отклонено`.
+- **Контекст**: четко определенная проблема/цель
+- **Решения**: предлагаемые варианты и изменения архитектуры
+- **Последствия**: плюсы и минусы решения
+- **Ссылки**: все необходимые материалы для чтения
