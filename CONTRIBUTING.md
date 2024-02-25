@@ -1,6 +1,6 @@
-# Contributing to jan
+# Вклад в jan
 
-First off, thank you for considering contributing to jan. It's people like you that make jan such an amazing project.
+Прежде всего, спасибо, что решили внести свой вклад в jan. Именно такие люди, как вы, делают jan таким замечательным проектом.
 
 ## Как я могу внести свой вклад?
 
