@@ -1,4 +1,4 @@
-# Jan - Bring AI to your Desktop
+# Jan - Перенесите искусственный интеллект на свой рабочий стол
 
 ![Jan banner](https://github.com/janhq/jan/assets/89722390/35daac7d-b895-487c-a6ac-6663daaad78e)
 
@@ -19,29 +19,28 @@
   - <a href="https://discord.gg/AsJ8krTT3N">Discord</a>
 </p>
 
-> ⚠️ **Jan is currently in Development**: Expect breaking changes and bugs!
+> ⚠️ **Jan в настоящее время находится в разработке**: Ожидайте серьезных изменений и ошибок!
 
-Jan is an open-source ChatGPT alternative that runs 100% offline on your computer.
+Jan - это альтернатива ChatGPT с открытым исходным кодом, которая работает на 100% автономно на вашем компьютере.
 
-**Jan runs on any hardware.** From PCs to multi-GPU clusters, Jan supports universal architectures:
-
-- [x] Nvidia GPUs (fast)
-- [x] Apple M-series (fast)
+**Jan работает на любом оборудовании.** От ПК до кластеров с несколькими GPU - Jan поддерживает универсальные архитектуры:
+- [x] Nvidia GPUs (быстро)
+- [x] Apple M-series (быстро)
 - [x] Apple Intel
 - [x] Linux Debian
 - [x] Windows x64
 
-## Download
+## Загрузка
 
 <table>
   <tr style="text-align:center">
-    <td style="text-align:center"><b>Version Type</b></td>
+    <td style="text-align:center"><b>Тип версии</b></td>
     <td style="text-align:center"><b>Windows</b></td>
     <td colspan="2" style="text-align:center"><b>MacOS</b></td>
     <td colspan="2" style="text-align:center"><b>Linux</b></td>
   </tr>
   <tr style="text-align:center">
-    <td style="text-align:center"><b>Stable (Recommended)</b></td>
+    <td style="text-align:center"><b>Стабильная (рекомендуется)</b></td>
     <td style="text-align:center">
       <a href='https://github.com/janhq/jan/releases/download/v0.4.6/jan-win-x64-0.4.6.exe'>
         <img src='./docs/static/img/windows.png' style="height:14px; width: 14px" />
@@ -74,7 +73,7 @@ Jan is an open-source ChatGPT alternative that runs 100% offline on your compute
     </td>
   </tr>
   <tr style="text-align:center">
-    <td style="text-align:center"><b>Experimental (Nightly Build)</b></td>
+    <td style="text-align:center"><b>Экспериментальная (ночная сборка)</b></td>
     <td style="text-align:center">
       <a href='https://delta.jan.ai/latest/jan-win-x64-0.4.6-285.exe'>
         <img src='./docs/static/img/windows.png' style="height:14px; width: 14px" />
@@ -108,15 +107,14 @@ Jan is an open-source ChatGPT alternative that runs 100% offline on your compute
   </tr>
 </table>
 
-Download the latest version of Jan at https://jan.ai/ or visit the **[GitHub Releases](https://github.com/janhq/jan/releases)** to download any previous release.
-
-## Demo
+Загрузите последнюю версию Jan https://jan.ai/ или посетите **[GitHub Releases](https://github.com/janhq/jan/releases)**, чтобы загрузить любую предыдущую версию.
+## Демо
 
 ![Demo](/demo.gif)
 
-_Realtime Video: Jan v0.4.3-nightly on a Mac M1, 16GB Sonoma 14_
+_Видео в реальном времени: Jan v0.4.3-nightly на Mac M1, 16GB Sonoma 14_
 
-## Quicklinks
+## Быстрые ссылки
 
 #### Jan
 
@@ -129,71 +127,71 @@ _Realtime Video: Jan v0.4.3-nightly on a Mac M1, 16GB Sonoma 14_
 
 #### Nitro
 
-Nitro is a high-efficiency C++ inference engine for edge computing. It is lightweight and embeddable, and can be used on its own within your own projects.
+Nitro - это высокоэффективный движок выводов на C++ для граничных вычислений. Он легкий и встраиваемый, и может использоваться самостоятельно в ваших собственных проектах.
 
 - [Nitro Website](https://nitro.jan.ai)
 - [Nitro GitHub](https://github.com/janhq/nitro)
 - [Documentation](https://nitro.jan.ai/docs)
 - [API Reference](https://nitro.jan.ai/api-reference)
 
-## Troubleshooting
+## Устранение неполадок
 
-As Jan is in development mode, you might get stuck on a broken build.
+Поскольку Jan находится в режиме разработки, вы можете застрять на неработающей сборке.
 
-To reset your installation:
+Чтобы сбросить установку, выполните следующие действия:
 
-1. Use the following commands to remove any dangling backend processes:
+1. С помощью следующих команд удалите все висящие процессы бэкенда:
 
    ```sh
    ps aux | grep nitro
    ```
 
-   Look for processes like "nitro" and "nitro_arm_64," and kill them one by one with:
+   Найдите такие процессы, как "nitro" и "nitro_arm_64", и уничтожьте их один за другим с помощью:
 
    ```sh
    kill -9 <PID>
    ```
 
-2. **Remove Jan from your Applications folder and Cache folder**
+2. **Удалите Jan из папки "Приложения" и папки "Кэш "**.
 
    ```bash
    make clean
    ```
 
-   This will remove all build artifacts and cached files:
+   Это приведет к удалению всех артефактов сборки и кэшированных файлов:
 
-   - Delete Jan extension from your `~/jan/extensions` folder
-   - Delete all `node_modules` in current folder
-   - Clear Application cache in `~/Library/Caches/jan`
+   - Удалите расширение Jan из папки `~/jan/extensions`.
+   - Удалите все `node_modules` в текущей папке
+   - Очистите кэш приложений в папке `~/Library/Caches/jan`.
 
-## Requirements for running Jan
+## Требования для запуска Jan
 
-- MacOS: 13 or higher
+- MacOS: 13 или выше
 - Windows:
-  - Windows 10 or higher
-  - To enable GPU support:
-    - Nvidia GPU with CUDA Toolkit 11.7 or higher
-    - Nvidia driver 470.63.01 or higher
+  - Windows 10 или выше
+  - Для включения поддержки GPU:
+    - Графический процессор Nvidia с CUDA Toolkit 11.7 или выше
+    - Драйвер Nvidia 470.63.01 или выше
 - Linux:
-  - glibc 2.27 or higher (check with `ldd --version`)
-  - gcc 11, g++ 11, cpp 11 or higher, refer to this [link](https://jan.ai/guides/troubleshooting/gpu-not-used/#specific-requirements-for-linux) for more information
-  - To enable GPU support:
-    - Nvidia GPU with CUDA Toolkit 11.7 or higher
-    - Nvidia driver 470.63.01 or higher
+  - glibc 2.27 или выше (проверьте с помощью `ldd --version`)
+  - gcc 11, g++ 11, cpp 11 или выше, для получения дополнительной информации обратитесь к этой [ссылке](https://jan.ai/guides/troubleshooting/gpu-not-used/#specific-requirements-for-linux).
+  - Для включения поддержки GPU:
+    - Nvidia GPU с CUDA Toolkit 11.7 или выше
+    - Драйвер Nvidia 470.63.01 или выше
 
-## Contributing
+## Внесение изменений
 
-Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) file
+Вклад приветствуется! Пожалуйста, прочитайте файл [CONTRIBUTING.md](CONTRIBUTING.md)
 
-### Pre-requisites
+### Зависемости
 
 - node >= 20.0.0
 - yarn >= 1.22.0
 - make >= 3.81
 
-### Instructions
+### Инструкции
 
-1. **Clone the repository and prepare:**
+1. **Склонируйте репозиторий и подготовьте:**.
 
    ```bash
    git clone https://github.com/janhq/jan
@@ -201,70 +199,68 @@ Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) fi
    git checkout -b DESIRED_BRANCH
    ```
 
-2. **Run development and use Jan Desktop**
+2. **Начните разработку и используйте Jan Desktop**.
 
    ```bash
    make dev
    ```
 
-This will start the development server and open the desktop app.
+Это запустит сервер разработки и откроет приложение для рабочего стола.
 
-### For production build
+### Для производственной сборки
 
 ```bash
-# Do steps 1 and 2 in the previous section
-# Build the app
+# Выполните шаги 1 и 2 из предыдущего раздела.
+# Создайте приложение
 make build
 ```
 
-This will build the app MacOS m1/m2 for production (with code signing already done) and put the result in `dist` folder.
+Это позволит собрать приложение MacOS m1/m2 для производства (с уже сделанной подписью кода) и поместить результат в папку `dist`.
+### Режим Docker
 
-### Docker mode
+- Поддерживаемые ОС: Linux, WSL2 Docker
+- Предварительные условия:
 
-- Supported OS: Linux, WSL2 Docker
-- Pre-requisites:
-
-  - Docker Engine and Docker Compose are required to run Jan in Docker mode. Follow the [instructions](https://docs.docker.com/engine/install/ubuntu/) below to get started with Docker Engine on Ubuntu.
+  - Для запуска Jan в режиме Docker необходимы Docker Engine и Docker Compose. Следуйте приведенным ниже [инструкциям](https://docs.docker.com/engine/install/ubuntu/), чтобы начать работу с Docker Engine на Ubuntu.
 
     ```bash
     curl -fsSL https://get.docker.com -o get-docker.sh
     sudo sh ./get-docker.sh --dry-run
     ```
 
-  - If you intend to run Jan in GPU mode, you need to install `nvidia-driver` and `nvidia-docker2`. Follow the instruction [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) for installation.
+  - Если вы собираетесь запускать Jan в режиме GPU, вам необходимо установить `nvidia-driver` и `nvidia-docker2`. Для установки следуйте инструкции [здесь](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
 
-- Run Jan in Docker mode
+- Запуск Jan в режиме Docker
 
-| Docker compose Profile | Description                                  |
+| Профиль Docker compose | Описание                                  |
 | ---------------------- | -------------------------------------------- |
-| `cpu-fs`               | Run Jan in CPU mode with default file system |
-| `cpu-s3fs`             | Run Jan in CPU mode with S3 file system      |
-| `gpu-fs`               | Run Jan in GPU mode with default file system |
-| `gpu-s3fs`             | Run Jan in GPU mode with S3 file system      |
+| `cpu-fs` | Запустите Jan в режиме процессора с файловой системой по умолчанию |
+| `cpu-s3fs` | Запуск Jan в режиме CPU с файловой системой S3 |
+| `gpu-fs` | Запуск Jan в режиме GPU с файловой системой по умолчанию |
+| `gpu-s3fs` | Запуск Jan в режиме GPU с файловой системой S3    |
 
-| Environment Variable    | Description                                                                                             |
+| Переменная среды | Описание |
 | ----------------------- | ------------------------------------------------------------------------------------------------------- |
-| `S3_BUCKET_NAME`        | S3 bucket name - leave blank for default file system                                                    |
-| `AWS_ACCESS_KEY_ID`     | AWS access key ID - leave blank for default file system                                                 |
-| `AWS_SECRET_ACCESS_KEY` | AWS secret access key - leave blank for default file system                                             |
-| `AWS_ENDPOINT`          | AWS endpoint URL - leave blank for default file system                                                  |
-| `AWS_REGION`            | AWS region - leave blank for default file system                                                        |
-| `API_BASE_URL`          | Jan Server URL, please modify it as your public ip address or domain name default http://localhost:1377 |
+| `S3_BUCKET_NAME` | Имя ведра S3 - оставьте пустым для файловой системы по умолчанию |
+| `AWS_ACCESS_KEY_ID` | Идентификатор ключа доступа AWS - оставьте пустым для файловой системы по умолчанию |
+| `AWS_SECRET_ACCESS_KEY` | Секретный ключ доступа AWS - оставьте пустым для файловой системы по умолчанию |
+| `AWS_ENDPOINT` | URL конечной точки AWS - оставьте пустым для файловой системы по умолчанию |
+| `AWS_REGION` | Регион AWS - оставьте пустым для файловой системы по умолчанию |
+| `API_BASE_URL` | Jan Server URL, пожалуйста, измените его как ваш публичный ip-адрес или доменное имя по умолчанию http://localhost:1377 |
 
-- **Option 1**: Run Jan in CPU mode
+- **Вариант 1**: Запустить Jan в режиме процессора
 
   ```bash
-  # cpu mode with default file system
+  # Режим процессора и файловой системой по умолчанию
   docker compose --profile cpu-fs up -d
 
-  # cpu mode with S3 file system
+  # Режим работы процессора и файловой системы S3
   docker compose --profile cpu-s3fs up -d
   ```
 
-- **Option 2**: Run Jan in GPU mode
+- **Вариант 2**: Запустите Jan в режиме GPU
 
-  - **Step 1**: Check CUDA compatibility with your NVIDIA driver by running `nvidia-smi` and check the CUDA version in the output
-
+  - **Шаг 1**: Проверьте совместимость CUDA с вашим драйвером NVIDIA, запустив `nvidia-smi` и проверьте версию CUDA в выводе
     ```bash
     nvidia-smi
 
@@ -296,38 +292,37 @@ This will build the app MacOS m1/m2 for production (with code signing already do
     |=======================================================================================|
     ```
 
-  - **Step 2**: Visit [NVIDIA NGC Catalog ](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/cuda/tags) and find the smallest minor version of image tag that matches your CUDA version (e.g., 12.1 -> 12.1.0)
+- **Шаг 2**: Посетите [NVIDIA NGC Catalog ](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/cuda/tags) и найдите наименьшую младшую версию тега изображения, которая соответствует вашей версии CUDA (например, 12.1 -> 12.1.0).
 
-  - **Step 3**: Update the `Dockerfile.gpu` line number 5 with the latest minor version of the image tag from step 2 (e.g. change `FROM nvidia/cuda:12.2.0-runtime-ubuntu22.04 AS base` to `FROM nvidia/cuda:12.1.0-runtime-ubuntu22.04 AS base`)
+  - **Шаг 3**: Обновите строку `Dockerfile.gpu` под номером 5, указав последнюю минорную версию image tag из шага 2 (например, измените `FROM nvidia/cuda:12.2.0-runtime-ubuntu22.04 AS base` на `FROM nvidia/cuda:12.1.0-runtime-ubuntu22.04 AS base`)
 
-  - **Step 4**: Run command to start Jan in GPU mode
+  - **Шаг 4**: Выполните команду для запуска Jan в режиме GPU
 
     ```bash
-    # GPU mode with default file system
+    # Режим GPU и файловой системой по умолчанию
     docker compose --profile gpu up -d
 
-    # GPU mode with S3 file system
+    # Режим GPU и файловой системы S3
     docker compose --profile gpu-s3fs up -d
     ```
 
-This will start the web server and you can access Jan at `http://localhost:3000`.
+Это запустит веб-сервер, и вы сможете получить доступ к Jan по адресу `http://localhost:3000`.
 
-> Note: RAG feature is not supported in Docker mode with s3fs yet.
+> Примечание: функция RAG пока не поддерживается в режиме Docker с s3fs.
 
-## Acknowledgements
-
+## Благодарности
 Jan builds on top of other open-source projects:
 
 - [llama.cpp](https://github.com/ggerganov/llama.cpp)
 - [TensorRT](https://github.com/NVIDIA/TensorRT)
 
-## Contact
+## Контакт
 
-- Bugs & requests: file a GitHub ticket
-- For discussion: join our Discord [here](https://discord.gg/FTk2MvZwJH)
-- For business inquiries: email hello@jan.ai
-- For jobs: please email hr@jan.ai
+- Ошибки и запросы: отправьте тикет на GitHub
+- Для обсуждения: присоединяйтесь к нашему Discord [здесь](https://discord.gg/FTk2MvZwJH)
+- Для деловых запросов: пишите на hello@jan.ai
+- Для работы: пожалуйста, напишите hr@jan.ai
 
-## License
+## Лицензия
 
-Jan is free and open source, under the AGPLv3 license.
+Jan является свободным и открытым источником, под лицензией AGPLv3.
